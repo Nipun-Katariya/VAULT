@@ -1,0 +1,107 @@
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 auto 0 5%;
+  background-color: #fff;
+  position: relative;
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.fid-logo{
+  position: absolute;
+  top: 2vh;
+  left: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.vault-image{
+  height: 60px;
+  margin-right: 100vh;
+  margin-left: 20px;
+  /* left: 20spx; */
+}
+
+.fil-image{
+  margin-left: 25vh;
+}
+
+.center-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px; /* Adjust the margin as needed */
+}
+.center-view img{
+  width: 56px;
+  height: 56px;
+}
+
+.crypto-button{
+  color: white;
+  background-color: #4AA00F;
+  margin-bottom: 2%;
+}
+
+.wallets button{
+  color: black;
+  background-color: rgb(174, 169, 169);
+  margin: 15px 15px;
+}
+
+header{
+  /* background-color: rgb(173, 173, 173); */
+  margin: 5% 0 5% 0;
+  width: 95vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: auto;
+}
+
+header nav a{
+  text-decoration: none;
+  margin-left: 5px;
+  justify-content: space-around;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 2%;
+  width: 100vh;
+  text-align: center;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+button{
+  background-color: white;
+  color: black;
+}
+
+.trans{
+  justify-content: center;
+  margin-left: 10px;
+}
+
+img{
+  align-items: center;
+  justify-content: center;
+}
+

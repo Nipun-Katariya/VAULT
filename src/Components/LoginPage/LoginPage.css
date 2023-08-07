@@ -1,0 +1,120 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.vault-logo {
+  position: absolute;
+  top: 1vh;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 120px;
+}
+
+.fil-logo {
+  position: absolute;
+  top: 1vh;
+  top: 30px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-box{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  margin-bottom: 10px;
+  width: 360px;
+}
+
+.tagline {
+  font-size: 14px;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* margin: 1vh 1vh; */
+  /* justify-content: center; */
+}
+  
+.login-box {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  padding: 20px;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.field-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/* Existing styles */
+
+.login-button {
+  padding: 15px;
+  font-size: 14px;
+  background-color: #4AA00F;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 299px;
+}
+.login-button:hover{
+  background-color: #5ab51d;
+  color: white;
+}
+.create-account {
+  font-size: 14px;
+  color: black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.create-button{
+  font-size: 14px;
+  margin: 5px;
+  background-color: #49a00fac;
+  color: white;
+  font-weight: bold;
+  cursor:default;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  
+}
+
+.right-pane{
+  margin-top: 5vh;
+}

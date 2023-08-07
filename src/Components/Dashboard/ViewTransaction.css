@@ -1,0 +1,62 @@
+/* ViewTransaction.css */
+.view-transaction {
+  margin: 0 10%;
+}
+
+.transaction-table {
+  border-collapse: separate;
+  table-layout: fixed;
+  border-spacing: 0;
+  width: 100%;
+  margin-right: 10%;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  border: 1.5px solid rgb(8, 8, 8);
+}
+
+.transaction-table thead th,
+.transaction-table tbody td {
+  border: 1.5px solid rgb(12, 11, 11);
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.transaction-table th {
+  background-color: #c6cacf;
+}
+
+.view-transaction h2 {
+  text-align: center;
+  border: 1.5px solid rgb(8, 8, 8);
+  background-color: #006193;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.transaction-table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+ 
+  position: relative; 
+}
+
+.transaction-table thead {
+  position:sticky; 
+  top: 0; 
+  background-color: #c6cacf; 
+  z-index: 0; 
+}
+
+
+
+.transaction-table-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.transaction-table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

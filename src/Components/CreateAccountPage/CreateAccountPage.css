@@ -1,0 +1,110 @@
+/* CreateAccountPage.css */
+.create-account-page {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.create-account-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  border-width: 5px;
+  border-color: #959596;
+}
+
+h1 {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.phrase{
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 20px;  
+  border: 2px solid #000000; /* Set the border style */
+  border-radius: 10px ; /* Horizontal radius = 20px, Vertical radius = 50px */
+  padding: 10px; /* Optional: Add some padding to create space around the text */
+   
+}
+
+label {
+  color: #000000;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  
+}
+
+input {
+ 
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #000000;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  
+}
+
+button {
+  background-color: #3aeb43;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  
+}
+
+button:hover {
+  background-color: #5ab51d;
+}
+
+/* Adjust the buttons on step 2 and step 3 */
+.create-account-box button {
+  margin-top: 5px;  
+  background-color: #006193;
+}
+
+.create-account-box button:hover {
+  background-color: #5ab51d;
+}
+
+
+
+/* CreateAccountPage.css */
+.create-account-box-3{
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  border-width: 5px;
+  border-color: #959596;
+}
+.create-account-box-3 p {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 20px;  
+  border: 2px solid #000000; /* Set the border style */
+  border-radius: 25px ; /* Horizontal radius = 20px, Vertical radius = 50px */
+  padding: 10px; /* Optional: Add some padding to create space around the text */
+   
+}
+.create-account-box-3 button {
+  margin-top: 5px;  
+  background-color: #006193;
+}
+.create-account-box-3 button:hover {
+  background-color: #5ab51d;
+}

@@ -1,0 +1,113 @@
+.send-crypto-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background-color: #eeeff0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* z-index: 9999; */
+  transition: transform 0.3s ease-out;
+}
+
+.send-crypto-modal.active {
+  transform: translateX(-100%);
+}
+
+.send-crypto-modal h2 {
+  margin-top: 0;
+}
+
+.send-crypto-modal .input-fields {
+  margin: 20px 0;
+}
+
+.send-crypto-modal label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.send-crypto-modal input {
+  display: block;
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.button-send {
+  padding: 8px 16px;
+  background-color: #4AA00F;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-send:hover {
+  background-color: #3a913d;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+hr {
+  background: #4AA00F;
+  color: #4AA00F;
+  border: #4AA00F;
+  height: 3.5px;
+}
+
+.title {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 5px;
+  align-items:center ;
+  text-align: left;
+  margin-left: 0;
+}
+.title > h2 {
+  width: 100%;
+  text-align: left;
+}
+
+.title button {
+  background-color: #eeeff0;
+  font-weight: bold;
+}
+
+.title button:hover {
+  background-color: #d1d5da;
+}
+
+/* Styling for the success message */
+.success-message {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
