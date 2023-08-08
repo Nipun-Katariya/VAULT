@@ -4,7 +4,7 @@ import "./Dashboard.css";
 import VerticalBar from "./VerticalBar";
 import ViewTransaction from "./ViewTransaction";
 import SendCrypto from "./SendCrypto";
-import { FIL, VAULT, ETHEREUM, RIPPLE, BITCOIN, NFT, TOKEN} from "../../assets/Images";
+import { FIL, VAULT, ETHEREUM, RIPPLE, BITCOIN, NFT, LITECOIN} from "../../assets/Images";
 import LoadingScreen from "./LoadingPage/LoadingScreen";
 import { AuthContext } from "../../Authorisation/AuthContext";
 import usersData from '../CreateAccountPage/usersData.json'
@@ -17,12 +17,15 @@ const Dashboard = () => {
   const [selectedOption, setSelectedOption] = useState("history");
   const [publicId, setPublicId] = useState(authorizedPublicKey); // Replace with actual user public ID
   const [accountBalance, setAccountBalance] = useState("0.00"); // Replace with actual account balance
+  const [userName, setUser] = useState(''); // Replace with actual account balance
   
   useEffect(() => {
     // Assuming your JSON structure is like: { publicId: "xxx", balance: "xxx" }
     const userData = usersData.find(data => data.publicId === publicId);
     if (userData) {
+      setPublicId(userData.publicId)
       setAccountBalance(userData.balance);
+      setUser(userData.username);
     }
   }, [publicId]); // Run this effect only when `publicId` changes
 
@@ -89,20 +92,20 @@ const Dashboard = () => {
 
               <div className=" border-blue-500 p-4 flex flex-col items-center gap-2">
                 <a href="#"><img
-                  src={NFT}
+                  src={LITECOIN}
                   alt=""
                   className="h-8 w-8"
-                />NFT
+                />Litecoin
                 </a>
               </div>
 
               <div className=" border-blue-500 p-4 flex flex-col items-center gap-2 justify-center">
                 <a href="#">
                   <img
-                    src={TOKEN}
+                    src={NFT}
                     alt=""
                     className="h-8 w-8"
-                  />Other Tokens
+                  />NFT
                 </a>
                 {/* <button onClick={""}>Token</button> */}
               </div>
@@ -110,7 +113,7 @@ const Dashboard = () => {
 
             </div>
           </main>
-
+          <h1><b>Welcome, {userName}.</b></h1>
           <h2><b>Your Public Address:</b> {publicId}</h2>
           <h3><b>Balance:</b> {accountBalance} ETH</h3>
 
@@ -121,7 +124,7 @@ const Dashboard = () => {
               setSelectedOption("send");
             }}
           >
-            <b>Transfer Ethereum</b>
+            <b>Transfer ETH &#x26A1;</b>
           </button>
           <div className="trans">
             <ViewTransaction />

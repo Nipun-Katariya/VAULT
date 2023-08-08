@@ -55,7 +55,7 @@ const handleLogin = (e) => {
         <div className="login-box">
           <form onSubmit={handleLogin}>
             
-            <label className="field-name">Welcome to Vault. <br></br>Import your existing wallet by entering your secrect recovery phrase.</label>
+            <label className="field-name"><b>Welcome to Vault.</b> <br></br>Import your existing wallet by entering your secrect recovery phrase.</label>
             <input
               className="input-field"
               type="password"

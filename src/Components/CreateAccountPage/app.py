@@ -4,7 +4,7 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="http://localhost:3000")
 
 # Define filenames for user data and transaction data files
 users_data_file = 'usersData.json'
@@ -52,10 +52,16 @@ def root():
 def store_user_data():
     data = request.get_json()
 
-    # The validation checks (unchanged)
+    # Check if the username already exists
+    existing_user = next((user for user in user_data if user['username'] == data['username']), None)
+    if existing_user:
+        return jsonify({"error": "Username already exists"}), 400
+
+    # Additional validation checks can be added here
 
     data['privateKey'] = rot13_encrypt(data['privateKey'])
-
+    data['balance'] = 5.00
+    
     user_data.append(data)
 
     # Append the new data and save to the file
@@ -63,11 +69,36 @@ def store_user_data():
 
     return jsonify({"message": "User data stored successfully"})
 
+
+@app.route('/api/update_balance', methods=['POST'])
+def update_balance():
+    data = request.get_json()
+
+    # Find the user by their senderAddress
+    user = next((user for user in user_data if user['publicId'] == data['senderAddress']), None)
+    if user:
+        # Update the balance by subtracting the transaction amount
+        user['balance'] -= float(data['amount'])
+
+        # Save the updated data to the file
+        save_data_to_file(users_data_file, user_data)
+
+        return jsonify({"message": "Balance updated successfully"})
+    else:
+        return jsonify({"error": "User not found"}), 400
+
 @app.route('/api/store_transaction_data', methods=['POST'])
 def store_transaction_data():
     data = request.get_json()
 
-    # The validation checks (unchanged)
+    required_fields = ["transactionHash", "senderAddress", "destinationAddress", "amount", "timestamp"]
+
+    # Check if all required fields are present
+    for field in required_fields:
+        if field not in data:
+            return jsonify({"error": f"{field} is missing"}), 400
+
+    # Additional validation checks as needed
 
     transaction_data.append(data)
 
@@ -75,6 +106,7 @@ def store_transaction_data():
     save_data_to_file(transactions_data_file, transaction_data)
 
     return jsonify({"message": "Transaction data stored successfully"})
+
 
 if __name__ == '__main__':
     app.run(debug=True)

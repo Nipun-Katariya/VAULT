@@ -8,8 +8,7 @@ const LoadingScreen = () => {
       <div>
 
       <img src={LOADING} className="giphy-embed" allowFullScreen></img>
-      <p>Hang On ! </p>
-       <p> We're Processing Your Transaction Securely</p>      
+      <p> Hang on while we securely process your transaction!</p>      
       {/* <h3>Loading...</h3> */}
       </div>
     </div>

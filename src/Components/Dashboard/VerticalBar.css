@@ -9,21 +9,25 @@
     position:fixed;
     left: 0;
     top: 0;
-    border-right: 2px solid lightgray;
+    border-right: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO1 {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.3s;
     text-align: center;
     font-size: 14px;
+    margin-top: 70px;
     margin-bottom: 10px;
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO1:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO1 img {
@@ -34,7 +38,7 @@
   .verticalLOGO2 {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.3s;
     text-align: center;
     font-size: 14px;
@@ -42,7 +46,8 @@
   }
   
   .verticalLOGO2:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO2 img {
@@ -53,7 +58,7 @@
   .verticalLOGO3 {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.3s;
     text-align: center;
     font-size: 14px;
@@ -61,7 +66,8 @@
   }
   
   .verticalLOGO3:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO3 img {
@@ -72,7 +78,7 @@
   .verticalLOGO4 {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.3s;
     text-align: center;
     font-size: 14px;
@@ -80,7 +86,8 @@
   }
   
   .verticalLOGO4:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO4 img {
@@ -91,7 +98,7 @@
   .verticalLOGO5 {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.3s;
     text-align: center;
     font-size: 14px;
@@ -99,7 +106,8 @@
   }
   
   .verticalLOGO5:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .verticalLOGO5 img {

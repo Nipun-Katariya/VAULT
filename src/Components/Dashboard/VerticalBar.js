@@ -1,8 +1,16 @@
 import React from 'react';
 import { HOME, ACCOUNT, SETTINGS,SUPPORT, LOGOUT} from '../../assets/Images';
 import './VerticalBar.css';
+import { useHistory } from 'react-router-dom';
 
 const VerticalBar = ({ selectedOption, onSelectOption }) => {
+const history = useHistory();
+
+const handleLogout = () => {
+
+  history.replace('/login');
+}
+
   return (
     <div className="vertical-bar">
       <div
@@ -40,7 +48,7 @@ const VerticalBar = ({ selectedOption, onSelectOption }) => {
       </div>
       <div
         className={`verticalLOGO5 ${selectedOption === 'history' ? 'active' : ''}`}
-        onClick={() => onSelectOption('history')}
+        onClick={handleLogout}
       > 
         {/* Replace with your history logo */}
         <img src={LOGOUT} alt="User Logo"/>

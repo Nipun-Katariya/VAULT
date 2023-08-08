@@ -14,8 +14,14 @@ const ViewTransaction = () => {
       (transaction) =>
         transaction.senderAddress === authorizedPublicKey 
     );
-    setTransactions(filteredTransactions);
+
+    // Sort the filtered transactions by timestamp in descending order
+    const sortedTransactions = [...filteredTransactions].sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+
+    setTransactions(sortedTransactions);
   }, [authorizedPublicKey]);
+
+
 
   const truncateAddress = (address) => {
     if (address.length <= 8) return address;
@@ -47,7 +53,7 @@ const ViewTransaction = () => {
 
   return (
     <div className="view-transaction">
-      <h2>Transaction History</h2>
+      <h2><b>Transaction History</b></h2>
       <div className="transaction-table-container">
         <table className="transaction-table">
           <thead>
@@ -56,7 +62,7 @@ const ViewTransaction = () => {
               <th>From</th>
               <th>To</th>
               <th>Amount</th>
-              <th>Completed At</th>
+              <th>Timestamp</th>
             </tr>
           </thead>
           <tbody>
